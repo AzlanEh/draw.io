@@ -11,3 +11,23 @@ createRoot(document.getElementById("root")).render(
     </DrawingProvider>
   </StrictMode>
 );
+
+// Register service worker for PWA
+// Commented out during development to avoid potential issues
+/*
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        console.log(
+          "Service Worker registered with scope:",
+          registration.scope
+        );
+      })
+      .catch((error) => {
+        console.error("Service Worker registration failed:", error);
+      });
+  });
+}
+*/

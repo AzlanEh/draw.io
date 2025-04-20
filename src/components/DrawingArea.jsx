@@ -1,7 +1,13 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  useContext,
+  forwardRef,
+} from "react";
 import { DrawingContext } from "../context/Context.jsx";
 
-const DrawingArea = React.forwardRef((props, ref) => {
+const DrawingArea = forwardRef((props, ref) => {
   const canvasRef = ref || useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const { selectedColor, selectedTool, fillColor, brushSize } =
